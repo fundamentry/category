@@ -1,0 +1,138 @@
+{
+  "$schema": "./node_modules/fallow/schema.json",
+  "entry": [
+    "src/index.ts"
+  ],
+  "rules": {
+    "unused-dependencies": "warn",
+    "private-type-leaks": "error",
+    "require-suppression-reason": "error"
+  },
+  "health": {
+    "coverage": "coverage/coverage-final.json",
+    "maxCrap": 5,
+    "maxCyclomatic": 5,
+    "maxCognitive": 5,
+    "maxUnitSize": 20,
+    "crapRefactorBand": 2
+  },
+  "production": {
+    "health": true
+  },
+  "boundaries": {
+    "zones": [
+      {
+        "name": "iso",
+        "patterns": [
+          "src/iso/**"
+        ]
+      },
+      {
+        "name": "lens",
+        "patterns": [
+          "src/lens/**"
+        ]
+      },
+      {
+        "name": "morphism",
+        "patterns": [
+          "src/morphism/**"
+        ]
+      },
+      {
+        "name": "optional",
+        "patterns": [
+          "src/optional/**"
+        ]
+      },
+      {
+        "name": "optic",
+        "patterns": [
+          "src/optic/**"
+        ]
+      },
+      {
+        "name": "prism",
+        "patterns": [
+          "src/prism/**"
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "from": "iso",
+        "allow": [
+          "lens",
+          "morphism",
+          "optic",
+          "optional",
+          "prism"
+        ]
+      },
+      {
+        "from": "lens",
+        "allow": [
+          "iso",
+          "morphism",
+          "optic",
+          "optional",
+          "prism"
+        ]
+      },
+      {
+        "from": "morphism",
+        "allow": []
+      },
+      {
+        "from": "optional",
+        "allow": [
+          "iso",
+          "lens",
+          "morphism",
+          "optic",
+          "prism"
+        ]
+      },
+      {
+        "from": "optic",
+        "allow": [
+          "iso",
+          "lens",
+          "morphism",
+          "optional",
+          "prism"
+        ]
+      },
+      {
+        "from": "prism",
+        "allow": [
+          "iso",
+          "lens",
+          "morphism",
+          "optic",
+          "optional"
+        ]
+      }
+    ]
+  },
+  "ignoreDependencies": [
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint/parser",
+    "eslint-config-airbnb-base",
+    "eslint-config-prettier",
+    "eslint-import-resolver-typescript",
+    "eslint-plugin-deprecation",
+    "eslint-plugin-import",
+    "eslint-plugin-json-format",
+    "eslint-plugin-prettier",
+    "fallow"
+  ],
+  "ignoreExports": [
+    {
+      "file": "src/**/*.ts",
+      "exports": [
+        "*"
+      ]
+    }
+  ]
+}

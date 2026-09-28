@@ -1,0 +1,5 @@
+{
+  "*.{ts,tsx,mts,cts,js,jsx,mjs,cjs,json}": [
+    "pnpm run lint:eslint:staged:fix"
+  ]
+}

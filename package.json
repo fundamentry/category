@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@fundamentry/category",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "A toolkit for working with categories.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fundamentry/category.git"
+  },
+  "author": {
+    "name": "Alexander Zakharov (azaxarov)",
+    "email": "alexander.zakharov@fundamentry.org"
+  },
+  "license": "UNLICENSED",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.18.0"
+    }
+  },
+  "packageManager": "pnpm@11.11.0+sha512.4463f65fd80ed80d69bc1d4bf163ee94f605c7380fc318bb5b2ebe15f8cd12d49c51a4d59e951b401e764d3b6ca751cbf51bc50ed7001a6bcb4935e684c34882",
+  "files": [
+    "lib",
+    "src",
+    "!src/**/*.test.ts"
+  ],
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "imports": {
+    "#project/*": {
+      "types": "./src/*/index.ts",
+      "default": "./lib/*/index.js"
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "scripts": {
+    "build": "run-s clean compile",
+    "clean": "run-p clean:lib clean:coverage",
+    "clean:coverage": "rimraf coverage",
+    "clean:lib": "rimraf lib",
+    "commit": "cz",
+    "compile": "tsc --project tsconfig.lib.json",
+    "lint": "run-p lint:eslint",
+    "lint:eslint": "eslint --ext ts,tsx,mts,cts,js,jsx,mjs,cjs,json .",
+    "lint:eslint:fix": "eslint --ext ts,tsx,mts,cts,js,jsx,mjs,cjs,json . --fix",
+    "lint:eslint:staged:fix": "eslint --ext ts,tsx,mts,cts,js,jsx,mjs,cjs,json --fix",
+    "lint:fix": "run-p lint:eslint:fix",
+    "prepare": "husky",
+    "qualify": "fallow audit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc"
+  },
+  "peerDependencies": {
+    "@fundamentry/coproduct": "catalog:"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@fundamentry/coproduct": "catalog:",
+    "@fundamentry/eslint-config-json": "catalog:",
+    "@fundamentry/eslint-config-prettier": "catalog:",
+    "@fundamentry/eslint-config-typescript": "catalog:",
+    "@fundamentry/typescript-config": "catalog:",
+    "@nx/js": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "commitizen": "catalog:",
+    "cz-conventional-changelog": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-airbnb-base": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-import-resolver-typescript": "catalog:",
+    "eslint-plugin-deprecation": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "eslint-plugin-json-format": "catalog:",
+    "eslint-plugin-prettier": "catalog:",
+    "fallow": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "npm-run-all": "catalog:",
+    "nx": "catalog:",
+    "prettier": "catalog:",
+    "rimraf": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
+}

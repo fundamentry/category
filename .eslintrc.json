@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "root": true,
+  "extends": [
+    "@fundamentry/eslint-config-json",
+    "@fundamentry/eslint-config-typescript",
+    "@fundamentry/eslint-config-prettier"
+  ],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@fundamentry/*",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "@fundamentry/*"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true,
+          "orderImportKind": "desc"
+        }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/*"
+      ],
+      "rules": {
+        "@typescript-eslint/no-namespace": "off",
+        "class-methods-use-this": "off"
+      }
+    },
+    {
+      "files": [
+        "src/**/*.test.ts",
+        "vitest.config.ts"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": [
+              "**/*.test.ts",
+              "vitest.config.ts"
+            ],
+            "optionalDependencies": false
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+name: Setup environment
+description: Sets up Node.js, pnpm, and installs dependencies
+
+inputs:
+  fundamentry-token:
+    description: Fundamentry token
+    required: false
+
+runs:
+  using: composite
+  steps:
+    - uses: pnpm/setup@v1
+      with:
+        cache: true
+        install: false
+
+    - shell: bash
+      run: |
+        pnpm config set //npm.pkg.github.com/:@fundamentry:_authToken "${{ inputs.fundamentry-token }}"
+        npm config set //npm.pkg.github.com/:_authToken "${{ inputs.fundamentry-token }}"
+
+    - shell: bash
+      run: pnpm install

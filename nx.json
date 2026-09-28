@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "analytics": false,
+  "defaultBase": "main",
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/lib"
+      ]
+    }
+  },
+  "release": {
+    "releaseTag": {
+      "pattern": "{version}"
+    },
+    "version": {
+      "conventionalCommits": true,
+      "adjustSemverBumpsForZeroMajorVersion": false
+    },
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "renderOptions": {
+          "authors": false,
+          "applyUsernameToAuthors": false,
+          "commitReferences": true,
+          "versionTitleDate": false
+        }
+      }
+    },
+    "git": {
+      "commitMessage": "chore: release [skip ci]"
+    }
+  }
+}

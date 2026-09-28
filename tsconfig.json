@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@fundamentry/typescript-config/common",
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "skipLibCheck": true
+  },
+  "include": [
+    "src",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules"
+  ]
+}
