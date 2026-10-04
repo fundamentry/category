@@ -33,7 +33,7 @@
         ],
         "pathGroupsExcludedImportTypes": [
           "@fundamentry/*",
-          "#project/*"
+          "#project/**"
         ],
         "newlines-between": "always",
         "alphabetize": {
