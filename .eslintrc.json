@@ -44,6 +44,8 @@
         "src/**/*"
       ],
       "rules": {
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
         "@typescript-eslint/no-namespace": "off",
         "class-methods-use-this": "off"
       }
