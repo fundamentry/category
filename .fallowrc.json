@@ -56,6 +56,12 @@
         "patterns": [
           "src/prism/**"
         ]
+      },
+      {
+        "name": "partial-iso",
+        "patterns": [
+          "src/partial-iso/**"
+        ]
       }
     ],
     "rules": [
@@ -111,6 +117,14 @@
           "morphism",
           "optic",
           "optional"
+        ]
+      },
+      {
+        "from": "partial-iso",
+        "allow": [
+          "iso",
+          "morphism",
+          "prism"
         ]
       }
     ]
