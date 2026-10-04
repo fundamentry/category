@@ -29,7 +29,8 @@
   "types": "./lib/index.d.ts",
   "imports": {
     "#project/*": {
-      "types": "./src/*/index.ts",
+      "@fundamentry/source": "./src/*/index.ts",
+      "types": "./lib/*/index.d.ts",
       "default": "./lib/*/index.js"
     }
   },

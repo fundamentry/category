@@ -3,6 +3,11 @@
   "entry": [
     "src/index.ts"
   ],
+  "resolve": {
+    "conditions": [
+      "@fundamentry/source"
+    ]
+  },
   "rules": {
     "unused-dependencies": "warn",
     "private-type-leaks": "error",
