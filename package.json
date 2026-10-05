@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@fundamentry/category",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "type": "module",
   "description": "A toolkit for working with categories.",
   "repository": {
