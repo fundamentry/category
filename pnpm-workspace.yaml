@@ -1,7 +1,7 @@
 catalog:
   '@commitlint/cli': 21.2.3
   '@commitlint/config-conventional': 21.2.3
-  '@fundamentry/coproduct': 1.1.0
+  '@fundamentry/coproduct': 1.2.0
   '@fundamentry/eslint-config-json': 1.4.7
   '@fundamentry/eslint-config-prettier': 1.0.6
   '@fundamentry/eslint-config-typescript': 1.1.11
@@ -36,4 +36,5 @@ allowBuilds:
   'unrs-resolver': false
 
 minimumReleaseAgeExclude:
-  - '@fundamentry/coproduct@1.1.0'
+  - '@fundamentry/coproduct@1.2.0'
+  - '@fundamentry/trait@3.0.0'
