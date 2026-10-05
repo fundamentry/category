@@ -13,8 +13,8 @@ catalogs:
       specifier: 21.2.3
       version: 21.2.3
     '@fundamentry/coproduct':
-      specifier: 1.2.0
-      version: 1.2.0
+      specifier: 1.2.1
+      version: 1.2.1
     '@fundamentry/eslint-config-json':
       specifier: 1.4.7
       version: 1.4.7
@@ -112,7 +112,7 @@ importers:
         version: 21.2.3
       '@fundamentry/coproduct':
         specifier: 'catalog:'
-        version: 1.2.0
+        version: 1.2.1
       '@fundamentry/eslint-config-json':
         specifier: 'catalog:'
         version: 1.4.7(eslint-plugin-json-format@2.0.1(eslint@8.57.1(supports-color@7.2.0))(supports-color@7.2.0))(eslint@8.57.1(supports-color@7.2.0))
@@ -932,8 +932,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fundamentry/coproduct@1.2.0':
-    resolution: {integrity: sha512-DpIZkgqe+4k12GS4NYqyq37BCrMKokg1qZVpqvkXclYxVjkeOjxBvBq/vQh+DkLiuWUJ7vrEQslmqyH5hT5fvw==, tarball: https://npm.pkg.github.com/download/@fundamentry/coproduct/1.2.0/b79fbbcc6d927dec1d95e5ab72b224d8acad3c42}
+  '@fundamentry/coproduct@1.2.1':
+    resolution: {integrity: sha512-edhmrf1L7GoEInLjATnWs/w9tzZDKOw3pG66mYfMTJt55sC17xKef0RisFrqYw9jiRCLqnEsoiD0bH+sqbPivQ==, tarball: https://npm.pkg.github.com/download/@fundamentry/coproduct/1.2.1/6f6c88f883bef72a6cd29a39c375c86e21286b40}
 
   '@fundamentry/eslint-config-base@1.1.8':
     resolution: {integrity: sha512-frbTHjKHozhwjSkiwHLemqaceu1u4MIR9H7SfBKa0Gm8v2+dYwB9sDMltFM7KUiG0FWH3Ywq9clRtRXG5o6XyA==, tarball: https://npm.pkg.github.com/download/@fundamentry/eslint-config-base/1.1.8/c67dfda7e64fc84edf5e0bcd518f3002e3699c39}
@@ -972,8 +972,8 @@ packages:
       eslint-plugin-import: 2.32.0
       typescript: 6.0.3
 
-  '@fundamentry/trait@3.0.0':
-    resolution: {integrity: sha512-DMSmKKj4OFcFHl5KSnOcJ+eM5r/k4MoICH907HKsvedH3q0DuI7aWAToSvNlzQ4JfbC88HPv2SpqxeAvshYhrQ==, tarball: https://npm.pkg.github.com/download/@fundamentry/trait/3.0.0/377bd12f8921f3a5f3b375ef14ad93ccb61f5ae2}
+  '@fundamentry/trait@3.1.0':
+    resolution: {integrity: sha512-grCjb9syAqMGLtqBw+MbF8sipOXT68mCeb3UQHeauJytnasNXaBWajdqgQz8Z8q4h6JOwi9zEpNoPmDB+x4hPQ==, tarball: https://npm.pkg.github.com/download/@fundamentry/trait/3.1.0/ebe7048aca80d5899267a865a98bc2ba2c281923}
 
   '@fundamentry/typescript-config@2.0.0':
     resolution: {integrity: sha512-0kN2ZyyV6ZkS0OIp66o+HTVU0JHVZsMQmAh09A6YffpPyPCagUsLLFNtH4SQ8gti5aoxXFvyVXvqHTJKBFLhVw==, tarball: https://npm.pkg.github.com/download/@fundamentry/typescript-config/2.0.0/847fa6d298999c18914fdffafb6ddd2318056ab7}
@@ -4872,9 +4872,9 @@ snapshots:
   '@fallow-cli/win32-x64-msvc@3.31.0':
     optional: true
 
-  '@fundamentry/coproduct@1.2.0':
+  '@fundamentry/coproduct@1.2.1':
     dependencies:
-      '@fundamentry/trait': 3.0.0
+      '@fundamentry/trait': 3.1.0
 
   '@fundamentry/eslint-config-base@1.1.8(eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.32.0)(eslint@8.57.1(supports-color@7.2.0)))(eslint-plugin-import@2.32.0)(eslint@8.57.1(supports-color@7.2.0))':
     dependencies:
@@ -4906,7 +4906,7 @@ snapshots:
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.71.0(eslint@8.57.1(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3))(eslint-import-resolver-typescript@4.4.5)(eslint@8.57.1(supports-color@7.2.0))
       typescript: 6.0.3
 
-  '@fundamentry/trait@3.0.0': {}
+  '@fundamentry/trait@3.1.0': {}
 
   '@fundamentry/typescript-config@2.0.0(typescript@6.0.3)':
     dependencies:
