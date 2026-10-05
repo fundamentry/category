@@ -1,3 +1,9 @@
+## 1.1.1
+
+### 🩹 Fixes
+
+- upgrade '@fundamentry/coproduct' to 1.2.0 ([7bacc6d](https://github.com/fundamentry/category/commit/7bacc6d))
+
 ## 1.1.0
 
 ### 🚀 Features
